@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息导入完成</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>用户信息导入完成</td>
+        <td>共导入{{ a }}条记录</td>
+    </tr>
+    <tr>
+        <td>车主工号重复的记录如下：</td>
+    </tr>
+    <tr>
+        <td>序号</td>
+        <td>用户ID</td>
+        <td>用户姓名</td>
+        <td>手机号码</td>
+        <td>组织ID</td>
+    </tr>
+    {% for p in yonghuxinxi_log_data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.0 }}</td>
+            <td>{{ p.1 }}</td>
+            <td>{{ p.2 }}</td>
+            <td>{{ p.3 }}</td>
+            <td>{{ p.4 }}</td>
+            <td>
+                <!-- 使用path转换器传输car.id的值 -->
+                <a href="">更新</a>
+
+                <!-- 使用查询字符串传输car.id的值  -->
+                <a href="">删除</a>
+            </td>
+        </tr>
+    {% endfor %}
+        <tr><td>导入错误信息如下：</td><td>{{ exception_log_data }}</td></tr>
+</table>
+</body>
+</html>

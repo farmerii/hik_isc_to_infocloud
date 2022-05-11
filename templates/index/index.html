@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'car_upload' %}">平台导出车辆信息上传</a></td>
+        <td><a href="{% url 'car_list' %}">所有车辆信息</a></td>
+        <td><a href="{% url 'car_clear' %}">清空所有车辆信息</a></td>
+    </tr>
+    <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'user_upload' %}">平台导出车主信息上传</a></td>
+        <td><a href="{% url 'user_list' %}">所有车主信息</a></td>
+        <td><a href="{% url 'user_clear' %}">清空所有车主信息</a></td>
+    </tr>
+    <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'qunzu_upload' %}">数据库导出群组信息上传</a></td>
+        <td><a href="{% url 'qunzu_list' %}">所有群组信息</a></td>
+        <td><a href="{% url 'qunzu_clear' %}">清空所有群组信息</a></td>
+    </tr>
+    <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'chezhu_upload' %}">数据库导出车辆信息上传</a></td>
+        <td><a href="{% url 'chezhu_list' %}">所有车辆信息</a></td>
+        <td><a href="{% url 'chezhu_clear' %}">清空所有车辆信息</a></td>
+    </tr>
+    <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'yonghuxinxi_upload' %}">数据库导出用户信息上传</a></td>
+        <td><a href="{% url 'yonghuxinxi_list' %}">所有用户信息</a></td>
+        <td><a href="{% url 'yonghuxinxi_clear' %}">清空所有用户信息</a></td>
+    </tr>
+        <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'zuzhixinxi_upload' %}">数据库导出组织信息上传</a></td>
+        <td><a href="{% url 'zuzhixinxi_list' %}">所有组织信息</a></td>
+        <td><a href="{% url 'zuzhixinxi_clear' %}">清空所有组织信息</a></td>
+    </tr>
+        <tr>
+        <td><p></p></td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'tingguanjia' %}">合并车辆信息</a></td>
+        <td><a href="{% url 'all_list' %}">合并后的所有信息</a></td>
+        <td><a href="{% url 'tingguanjia_clear' %}">清空所有车主信息</a></td>
+        <td>合并数据量较大时，需要较长时间，如4000条数据约需要10分钟，请耐心等待。</td>
+    </tr>
+    <tr>
+        <td><a href="{% url 'all_download' %}">下载所有合并信息</a></td>
+        <td>合并数据量较大时，需要较长时间，如4000条数据约需要10分钟，请耐心等待。</td>
+    </tr>
+</table>
+
+</body>
+</html>

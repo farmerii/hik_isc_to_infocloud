@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组织信息导入完成</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>组织信息导入完成</td>
+        <td>共导入{{ a }}条记录</td>
+    </tr>
+    <tr>组织ID重复的如下：</tr>
+    <tr>
+        <td>序号</td>
+        <td>组织ID</td>
+        <td>组织名称</td>
+    </tr>
+    {% for p in zuzhixinxi_log_data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.0 }}</td>
+            <td>{{ p.1 }}</td>
+        </tr>
+    {% endfor %}
+    <tr>导入错误信息：</tr>
+    <tr>{{ exception_log_data }}</tr>
+</table>
+
+
+</body>
+</html>

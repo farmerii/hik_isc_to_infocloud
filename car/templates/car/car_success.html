@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导入完成</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>导入完成</td>
+        <td>共导入{{ a }}条记录</td>
+    </tr>
+    <tr>车牌号重复的如下：</tr>
+    <tr>
+        <td>序号</td>
+        <td>车牌号码</td>
+        <td>车主姓名</td>
+        <td>工号</td>
+    </tr>
+    {% for p in car_log_data %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ p.0 }}</td>
+            <td>{{ p.1 }}</td>
+            <td>{{ p.2 }}</td>
+
+            <td>
+                <!-- 使用path转换器传输car.id的值 -->
+                <a href="">更新</a>
+
+                <!-- 使用查询字符串传输car.id的值  -->
+                <a href="">删除</a>
+            </td>
+        </tr>
+    {% endfor %}
+    <tr>导入错误信息：</tr>
+    <tr>{{ exception_log_data }}</tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>导入车主信息</title>
+</head>
+<body>
+<tr><td>数据量较大时，需要较长时间，如4000条数据约需要10分钟，请耐心等待。</td></tr>
+<form action="{% url 'user_upload' %}" method="post" enctype="multipart/form-data" class="">
+    {% csrf_token %}
+    <p>上传完成会自动导入，导入完成后页面会自动跳转到首页</p>
+    <div class="">
+        <label for="name" class="">选择需要导入的文件：</label>
+        <div class="">
+            <input type="file" name="csv_file" id="csv_file" required="True" class="">
+        </div>
+    </div>
+    <div class="">
+        <div class="" style="margin-bottom: 10px;">
+            <button class=""><span class="" style="margin-right: 5px;"></span>上传</button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

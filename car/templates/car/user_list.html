@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有车辆信息</title>
+</head>
+<body>
+<table >
+    <tr>
+        <td>序号</td>
+        <td>ID号</td>
+        <td>车主姓名</td>
+        <td>组织路径</td>
+        <td>车主工号</td>
+        <td>手机号码</td>
+    </tr>
+<!--显示页面内容-->
+{% for p in c_page %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>{{ p.chezhuxingming }}</td>
+        <td>{{ p.zuzhilujing }}</td>
+        <td>{{ p.gonghao }}</td>
+        <td>{{ p.shoujihaoma }}</td>
+        <td>
+            <!-- 使用path转换器传输car.id的值 -->
+            <a href="">更新</a>
+
+            <!-- 使用查询字符串传输car.id的值  -->
+            <a href="">删除</a>
+        </td>
+    </tr>
+{% endfor %}
+</table>
+<!--判断是否有上一页，如有则显示连接，如无则显示文字-->
+{% if c_page.has_previous %}
+    <a href="{% url 'user_list' %}?page={{ c_page.previous_page_number }}">上一页</a>
+{% else %}
+    上一页
+{% endif %}
+<!--所有页码,如为当前页码则显示页码，如非当前页则显示链接-->
+{% for p_num in paginator.page_range %}
+    {% if p_num == c_page.number %}
+        {{ p_num }}
+    {% else %}
+        <a href="{% url 'user_list' %}?page={{ p_num }}">{{ p_num }}</a>
+    {% endif %}
+{% endfor %}
+<!--判断是否有下一页，如有则显示，如无则不显示-->
+{% if c_page.has_next %}
+    <a href="{% url 'user_list' %}?page={{ c_page.next_page_number }}">下一页</a>
+{% endif %}
+</body>
+</html>
