@@ -12,13 +12,16 @@
 
 3.1车辆群组信息
 3.1.1搜索如下信息
+
 --
 -- Data for Name: tb_car_group; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
+
 3.1.2再搜索数据结尾信息
 \.
 3.1.3将之间的信息复制并保存到.txt文件中
 3.1.4车辆群组信息格式如下：
+
 --
 -- Data for Name: tb_car_group; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
@@ -30,14 +33,19 @@ f85ffeba-7aa1-11e9-a347-e3e145b8fca3	76df6b8bca1d49a198491107785b2f8b	外协货�
 \.
 
 3.2车辆信息
+
 3.2.1搜索如下信息
+
 --
 -- Data for Name: tb_vehicle_info; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
+
 3.2.2再搜索数据结尾信息
 \.
 3.2.3将之间的信息复制并保存到.txt文件中
+
 3.2.4车辆信息格式如下：
+
 --
 -- Data for Name: tb_vehicle_info; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
@@ -49,14 +57,21 @@ COPY public.tb_vehicle_info (v_id, v_plate_no, v_plate_type, v_plate_color, v_ve
 \.
 
 3.3组织路径信息
+
 3.3.1搜索如下信息
+
 --
 -- Data for Name: tb_organizational; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
+
 3.3.2再搜索数据结尾信息
+
 \.
+
 3.3.3将之间的信息复制并保存到.txt文件中
+
 3.3.4组织路径信息格式如下：
+
 --
 -- Data for Name: tb_organizational; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
@@ -68,14 +83,21 @@ e10d72e6-165e-4ef2-be0b-1d1c8640f1ab	\N	***科	0ed89372-6034-43aa-b486-685529ac8
 \.
 
 3.4车主信息
+
 3.4.1搜索如下信息
+
 --
 -- Data for Name: tb_person; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
+
 3.4.2再搜索数据结尾信息
+
 \.
+
 3.4.3将之间的信息复制并保存到.txt文件中
+
 3.4.4车主信息格式如下：
+
 --
 -- Data for Name: tb_person; Type: TABLE DATA; Schema: public; Owner: pms_pmsdb_user
 --
